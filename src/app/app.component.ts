@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { DummyService } from './service/dummy.service';
-import { Subscription} from "rxjs";
+import { Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,19 @@ import { Subscription} from "rxjs";
 })
 export class AppComponent implements OnDestroy {
   
-  title = 'app';
-  count : number = 3;
+  
+  public count : number = 3;
+  public nom : string;
+
   public subscription : Subscription;
 
   constructor(private dummy : DummyService){
     this.subscription = this.dummy.getSub().subscribe(value => {    
       this.count = value
     });
+
+
+    this.dummy.getNameRequest().subscribe(body => this.nom = body.name);
   }
 
   public addValue() : void{

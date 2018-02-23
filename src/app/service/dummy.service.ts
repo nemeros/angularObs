@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, BehaviorSubject  } from "rxjs";
 import 'rxjs/add/observable/of';
 
@@ -20,9 +20,14 @@ export class DummyService {
      return this.subject.asObservable();
    }
 
-   public add(){
+   public add() : void {
      this.current = this.current + 1;
       this.subject.next(this.current);
+   }
+
+
+   public getNameRequest() : Observable<any> {
+     return this.http.get<any>(this.url);
    }
 
 }
