@@ -6,14 +6,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DummyService } from './service/dummy.service';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [DummyService],
   bootstrap: [AppComponent]
