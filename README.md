@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
+## Content
+
+Skeleton of angualr 5 app with angular bootstrap MD.
+
+Integration of scss, change the /scss/_custom.scss for global configuration.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
