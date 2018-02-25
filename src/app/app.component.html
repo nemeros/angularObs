@@ -4,26 +4,37 @@
 
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" style="margin-top:5em;">
-  <div class="card">
-    <div class="card-header bg-primary">
-      Compteur
-    </div>
-    <div class="card-body">
-      <span>{{count}}</span>
-    </div>
-  </div>
+  
+        <div class="card">
+            <div class="card-header bg-primary">
+              Compteur
+            </div>
+            <div class="card-body">
+              <span>{{count}}</span>
+            </div>
+          </div>
+ 
+ 
 
   <div style="margin-top:1em;">
       <button type="button" class="btn btn-primary" (click)="addValue()">Add 1</button>
   </div>
 
-  <div class="card" style="margin-top:2em;">
-    <div class="card-header">
-      Le nom provenant du fichier
+  <div class="row">
+      <div class="col-sm-6 col-lg-3">
+  <div class="card card-star" style="margin-top:2em;">
+    <div class="card-header bg-orange">
+      <i class="fa fa-shopping-cart"></i>
     </div>
     <div class="card-body">
       {{nom}}
     </div>
+    <div class="card-footer">
+      un footer
+    </div>
   </div>
+</div>
+</div>
+
 </div>
 
